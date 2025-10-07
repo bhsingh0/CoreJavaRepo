@@ -1,4 +1,4 @@
-package solidPrinciples;
+package solidPrinciples.OCP;
 
 /*
  * @created 06/10/2025 -14:23

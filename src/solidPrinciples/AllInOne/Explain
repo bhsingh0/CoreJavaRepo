@@ -1,0 +1,39 @@
+How Each SOLID Principle is Applied:
+1. SRP (Single Responsibility Principle)
+Transaction classes handle only transaction data
+
+AccountRepository only handles data storage
+
+NotificationService only handles notifications
+
+BankingService only handles business logic
+
+2. OCP (Open/Closed Principle)
+BaseAccount is open for extension (new account types)
+
+New account types can be added without modifying existing code
+
+SavingsAccount, CheckingAccount, PremiumSavingsAccount extend base functionality
+
+3. LSP (Liskov Substitution Principle)
+All account types can substitute Account interface
+
+No unexpected behavior when substituting subtypes
+
+All accounts maintain the contract defined by Account
+
+4. ISP (Interface Segregation Principle)
+Transferable, Loanable, InterestEarning are small, focused interfaces
+
+Classes implement only interfaces they need
+
+PremiumSavingsAccount implements multiple interfaces but only relevant ones
+
+5. DIP (Dependency Inversion Principle)
+BankingService depends on AccountRepository and NotificationService abstractions
+
+Concrete implementations can be swapped without affecting high-level modules
+
+Dependency injection through constructor
+
+This example demonstrates how all SOLID principles work together to create a maintainable, extensible, and robust banking system.

@@ -1,4 +1,6 @@
-package solidPrinciples;
+package solidPrinciples.OCP.impl;
+
+import solidPrinciples.OCP.PaymentProcessor;
 
 /*
  * @created 06/10/2025 -14:25
