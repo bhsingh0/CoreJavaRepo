@@ -14,8 +14,7 @@ import java.util.function.BiPredicate;
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<Integer>();
 
-        BiConsumer<ArrayList<Integer>,Integer> biConsumer = ArrayList::add;
-        biConsumer.accept(list,1);
-        System.out.println("is integer added : " + list);
+        BiPredicate<ArrayList<Integer>,Integer> biPredicate = ArrayList::add;
+        System.out.println("is integer added : " + biPredicate.test(list,1));
     }
 }
